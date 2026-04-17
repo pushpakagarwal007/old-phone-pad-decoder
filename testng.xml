@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="OldPhonePadSuite" parallel="false">
+
+    <listeners>
+        <listener class-name="listeners.test.org.example.sevice.TestListener"/>
+    </listeners>
+
+    <!-- Smoke Tests -->
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.org.example.sevice.OldPhonePadTest"/>
+        </classes>
+    </test>
+
+    <!-- Regression Tests -->
+    <test name="RegressionTests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.org.example.sevice.OldPhonePadTest"/>
+        </classes>
+    </test>
+
+    <!-- Edge Case Tests -->
+    <test name="EdgeTests">
+        <groups>
+            <run>
+                <include name="edge"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.org.example.sevice.OldPhonePadTest"/>
+        </classes>
+    </test>
+
+    <!-- Performance / Stress -->
+    <test name="PerformanceTests">
+        <groups>
+            <run>
+                <include name="performance"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.org.example.sevice.OldPhonePadTest"/>
+        </classes>
+    </test>
+
+</suite>
